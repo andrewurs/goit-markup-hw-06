@@ -1,4 +1,4 @@
-/* INDEX.HTML STYLES */
+/*----------------- INDEX.HTML STYLES-------------- */
 :root {
   --main-text-color: #757575;
   --secondary-text-color: #212121;
@@ -17,7 +17,7 @@
   --team-n-modal-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
   0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-/* Common styles */
+/* --------------Common styles---------------- */
 body {
   background-color: var(--third-text-color);
   color: var(--main-text-color);
@@ -88,7 +88,7 @@ ol {
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
 }
-/* site nav */
+/* -------------site nav------------------- */
 .nav {
   display: flex;
   align-items: center;
@@ -153,7 +153,7 @@ header {
 .site-nav-link.current {
   color: var(--accent-color);
 }
-/* ------------------header contacts----------------------------*/
+/* ------------------header contacts----------------*/
 .header-contact:hover,
 .header-contact:focus {
   color: var(--accent-color);
@@ -185,7 +185,7 @@ header {
 fill: currentColor;
 margin-right: 10px;
 }
-/* -----------hero section--------------------------------------- */
+/* -----------hero section--------------------- */
 .container-fluid {
   min-height: 600px;
   max-width: 1600px;
@@ -226,63 +226,6 @@ margin-right: 10px;
   pointer-events: none;
   visibility: hidden;
 }
-.modal-wrapper{
-  opacity: 1;
-  visibility: visible;
-  top: 50%;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  position: absolute;
-  width: 528px;
-  height: 581px;
-  background-color: #ffffff;
-  border-radius: 4px;
-  transition: transform var(--main-effect), opacity var(--main-effect),
-  visibility var(--main-effect);
-  background-color: var(--third-text-color);
-  box-shadow: var(--team-n-modal-shadow);
-}
-.backdrop.is-hidden .modal-wrapper{
-  transform: scale(.4);
-  opacity: 0;
-  transform: translate(-50%, -50%);
-}
-.backdrop .modal-wrapper{
-transform: scale(1);
-opacity: 1;
-transform: translate(-50%, -50%);
-}
-.modal-btn{
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 8px;
-  right: 8px;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-  padding: 0;
-  color: #000000;
-  background-color: var(--third-text-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: transform var(--main-effect), border var(--main-effect),
-  background-color var(--main-effect), color var(--main-effect);
-}
-.icon-close {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-.modal-btn:hover,
-.modal-btn:focus {
-  background-color: var(--accent-color);
-  color: var(--third-text-color);
-  border: transparent;
-  transform: rotate(180deg);
-}
 .button.primary:hover,
 .button.primary:focus {
   background-color: #188ce8;
@@ -307,8 +250,211 @@ transform: translate(-50%, -50%);
   text-align: center;
   align-items: center;
 }
+/* -------------Modal wrapper--------------- */
+.modal-wrapper {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  position: absolute;
+  min-width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  transition: transform var(--main-effect), opacity var(--main-effect),
+    visibility var(--main-effect);
+  background-color: var(--third-text-color);
+  box-shadow: var(--team-n-modal-shadow);
+}
 
-/* advantages section */
+.backdrop.is-hidden .modal-wrapper {
+  transform: scale(.4);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+.backdrop .modal-wrapper {
+  transform: scale(1);
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.modal-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 8px;
+  right: 8px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  color: #000000;
+  background-color: var(--third-text-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: transform var(--main-effect), border var(--main-effect),
+    background-color var(--main-effect), color var(--main-effect);
+}
+.icon-close {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--third-text-color);
+  border: transparent;
+  transform: rotate(180deg);
+}
+.modal-form {
+  display: block;
+  width: 448px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 0;
+}
+.modal-title {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--secondary-text-color)
+}
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.form-label{
+  text-align: left;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.form-group.textarea{
+  margin-bottom: 20px;
+}
+.form-input {
+  width: 100%;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+  padding-right: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--main-effect);
+
+}
+.form-input-text {
+  width: 100%;
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  transition: border-color var(--main-effect);
+}
+.form-input::placeholder,
+.form-input-text::placeholder{
+  font-size: 14px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-group:focus-within > .form-input,
+.form-group:focus-within > .form-input-text{
+  outline: transparent;
+  border-color: var(--accent-color);
+}
+
+.form-icon{
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  fill: #212121;
+  transition: fill var(--main-effect);    
+}
+.form-group:focus-within>.form-icon {
+  fill: var(--accent-color);
+}
+.form-group.agreement{
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+.agreement-link{
+  text-decoration-line: underline;
+  color: var(--accent-color);
+  margin-left: 3px;
+}
+.checkbox-vector {
+  margin-right: 7px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  fill: none;
+  transition: border-color var(--main-effect), background-color var(--main-effect),
+  fill var(--main-effect);
+}
+.form-group.agreement:focus-within>.checkbox-vector {
+  border-color: var(--accent-color);
+}
+.form-checkbox.agreement:checked~.checkbox-vector {
+  border: transparent;
+  background-color: var(--accent-color);
+  fill: var(--primary-white-color);
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.form-btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--third-text-color);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: transparent;
+  border-radius: 4px;
+  transition: background-color var(--main-effect);
+}
+.form-btn:hover,
+.form-btn:focus {
+  background-color: #188ce8;
+}
+
+
+/*------------ advantages section--------------- */
 .advantages-content {
   display: flex;
   margin-top: 0;
@@ -423,7 +569,7 @@ transform: translate(-50%, -50%);
   padding-bottom: 0;
   margin-bottom: 16px;
 }
-/* our team */
+/* ------------our team----------------------- */
 .team {
   background-color: #f5f4fa;
   display: flex;
@@ -528,7 +674,7 @@ transform: translate(-50%, -50%);
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
-/* -------------------------------------footer------------------------------ */
+/* ----------------------footer-------------------- */
 address {
   font-style: normal;
   margin-top: 20px;
@@ -596,9 +742,10 @@ footer {
 .footer-contacts {
   margin: 0;
 }
-/* -------------------------------footer socials------------------------- */
+/* ------------------footer socials----------------- */
 .footer-center {
   display: block;
+  margin-right: 93px;
 }
 
 .footer-item:not(:last-child) {
@@ -607,7 +754,7 @@ footer {
 .footer-social-icons {
   display: flex;
 }
-.join-title {
+.join-title, .subscribe-label  {
   display: block;
   font-size: inherit;
   font-weight: 700;
@@ -641,8 +788,54 @@ footer {
 .footer-icon-link:focus {
   background-color: var(--accent-color);
 }
-/* ----------------------PORTFOLIO.HTML STYLES---------------------*/
-/* ----------------------filters---------------------------------- */
+/* -------------------Footer form-------------- */
+.subscribe-input {
+  display: inline-block;
+  width: 358px;
+  height: 50px;
+  padding: 15px;
+  margin-right: 12px;
+  color: var(--third-text-color);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.subscribe-input::placeholder {
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscribe-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe-button {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: transparent;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--third-text-color);
+  fill: var(--third-text-color);
+  }
+  .button-text {
+    margin-right: 10px;
+  }
+/* ----------------PORTFOLIO.HTML STYLES-----------------*/
+/* ----------------------filters------------------ */
 .button-secondary {
   color: var(--secondary-text-color);
   background-color: #f5f4fa;
@@ -670,7 +863,7 @@ footer {
   color: var(--third-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-/* ---------------------------------products------------------------------ */
+/* ------------------products--------------------- */
 .product-img {
   display: block;
 }
@@ -688,7 +881,7 @@ footer {
   font-weight: 400;
   margin: 0;
 }
-/* -----------------------------container portfolio------------------------- */
+/* ------------------container portfolio--------------- */
 .section {
   padding: 94px 0;
 }
